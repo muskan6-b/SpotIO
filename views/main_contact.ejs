@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lakshay Parking</title>
+    <link rel="stylesheet" href="styles/header-footer.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h1><span>Contact</span> - SpotIQ </h1>
+            <ul>
+                <a href="/" style="text-decoration: none; color: white;">
+                    <li>Home</li>
+                </a>
+                <a href="#" style="text-decoration: none; color: white;">
+                    <li>About</li>
+                </a>
+                <a href="/contact-main" style="text-decoration: none; color: white;">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+
+        <div class="contact-form" style="margin-top: 13vh;">
+            <h1>Contact Us</h1>
+
+            <form class="con-form" action="/contact-submit" method="post">
+                <input name="name" type="text" class="feedback-input" placeholder="Name" />
+                <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+                <input class="submit-contact" type="submit" value="SUBMIT" />
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

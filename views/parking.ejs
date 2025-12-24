@@ -1,0 +1,121 @@
+<%- include("partials/header.ejs") %>
+
+
+
+
+    <div class="out">
+        <h1 style="color: antiquewhite;">Parking View</h1>
+        <div class="cntr_div">
+            <div class="bike_parking">
+                <div class="veh_entry">
+                    <h2 style="color: rgb(83, 82, 80);">Entry</h2>
+                </div>
+                <div class="bike_entry">
+                    <div class="firstrow_bk">
+                        <% for( let i=0; i < 10; i++ ) { %>
+                            <div class="bkp_div" id="b<%=i+1%>" <% for(let j=0; j<pkno.length;j++){ if (pkno[j]=='b'
+                                +(i+1)) { %>
+                                style="background-color: red;"
+                                <% }} %>
+                                    >
+                                    <p style="font-size: .7rem;">
+                                        <%= i+1 %>
+                                    </p>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="secondrow_bk">
+                        <% for( let i=0; i < 9; i++ ) { %>
+                            <div class="bkp_div" id="b<%=i+11%>" <% for(let j=0; j<pkno.length;j++){ if (pkno[j]=='b'
+                                +(i+11)) { %>
+                                style="background-color: red;"
+                                <% }} %> >
+                                    <p style="font-size: .7rem;">
+                                        <%= i+11 %>
+                                    </p>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="thirdrow_bk">
+                        <% for( let i=0; i < 10; i++ ) { %>
+                            <div class="bkp_div" id="b<%=i+20%>" <% for(let j=0; j<pkno.length;j++){ if (pkno[j]=='b'
+                                +(i+20)) { %>
+                                style="background-color: red;"
+                                <% }} %> >
+                                    <p style="font-size: .7rem;">
+                                        <%= i+20 %>
+                                    </p>
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="car_parking">
+                <div class="car_entry">
+                    <div class="emptyrow_car">
+                    </div>
+                    <div class="firstrow_car">
+                        <% for( let i=7; i> 0; i-- ) { %>
+                            <div class="carpk_div" <% for(let j=0; j<pkno.length;j++){ if (pkno[j]=='c' +i) { %>
+                                style="background-color: red;"
+                                <% }} %> >
+                                    <p style="font-size: .7rem;" id="c<%=i%>">
+                                        <%= i %>
+                                    </p>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="secondrow_car">
+                        <div class="scrow_car">
+                            <% for( let i=7; i> 0; i-- ) { %>
+                                <div class="carpk_div" id="c<%=i+7%>" <% for(let j=0; j<pkno.length;j++){ if
+                                    (pkno[j]=='c' +(i+7)) { %>
+                                    style="background-color: red;"
+                                    <% }} %> >
+                                        <p style="font-size: .7rem;">
+                                            <%= i+7 %>
+                                        </p>
+                                </div>
+                                <% } %>
+                        </div>
+                        <div class="scrow_car">
+                            <% for( let i=7; i> 0; i-- ) { %>
+                                <div class="carpk_div" <% for(let j=0; j<pkno.length;j++){ if (pkno[j]=='c' +(i+14)) {
+                                    %>
+                                    style="background-color: red;"
+                                    <% }} %> >
+                                        <p style="font-size: .7rem;" id="c<%=i+14%>">
+                                            <%= i+14 %>
+                                        </p>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+                    <div class="thirdrow_car">
+                        <% for( let i=7; i> 0; i-- ) { %>
+                            <div class="carpk_div" id="c<%=i+21%>" <% for(let j=0; j<pkno.length;j++){ if (pkno[j]=='b'
+                                +(i+21)) { %>
+                                style="background-color: red;"
+                                <% }} %> >
+                                    <p style="font-size: .7rem;">
+                                        <%= i+21 %>
+                                    </p>
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <%- include("partials/footer.ejs") %>

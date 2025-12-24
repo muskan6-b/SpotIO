@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="data_show" style="margin-left: 0; width: 100%;">
+        <div class="search_div">
+            <form action="/search" method="post" style="height: 90%;">
+                <input type="text" name="search_box" id="search" placeholder="Enter Vehicle or Parking no.">
+                <!-- <img src="images/search_img.png" class="search_img" name="search_btn" role="button"> -->
+                <input type="image" src="images/search_img.png" class="search_img" alt="submit" />
+            </form>
+        </div>
+        <h1 style="margin-top: 3%;">Parking History</h1>
+        <hr width="50%" style="margin-left: 25%;">
+        <% if (locals.getData) { %>
+            <div style="overflow-y: scroll; height: 70%;      background: radial-gradient(ellipse at bottom, #f2f2f2, #e2e4e8);
+            width: 95%; margin-left: 2.5%; margin-top: 1%; border-radius: 10px; color: black;">
+                <table class="data_table" style="line-height: 110%; text-align: left;">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;">No.</th>
+                            <th style="width: 20%;">Owner Name</th>
+                            <th style="width: 15%;">Parking ID</th>
+                            <th style="width: 20%;">Vehicle Name</th>
+                            <th style="width: 20%;">Vehicle No.</th>
+                            <th style="width: 20%;">Entry Date</th>
+                    </thead>
+                    <tbody style="font-size: .9rem; text-align: left;">
+                        <% for( let index=0; index < getData.rows.length; index++ ) { %>
+                            <tr>
+                                <td>
+                                    <%= index+1 %>
+                                </td>
+                                <td>
+                                    <%= getData.rows[index].owner_name %>
+                                </td>
+                                <td>
+                                    <%= getData.rows[index].parking_no %>
+                                </td>
+                                <td>
+                                    <%= getData.rows[index].vehicle_company %>
+                                </td>
+                                <td>
+                                    <%= getData.rows[index].vehicle_no %>
+                                </td>
+                                <td>
+                                    <%= String(getData.rows[index].entry_date).slice(4,15) %>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <% } else { %>
+                <h2 style="margin-top: 10%;">No data Available</h2>
+                <% } %>
+    </div>
+    <%- include("partials/footer.ejs") %>

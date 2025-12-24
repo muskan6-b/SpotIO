@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lakshay Parking</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="bgAnimation" id="bgAnimation">
+        <div class="backgroundAmim">
+
+        </div>
+    </div>
+    <div class="container">
+        <nav>
+            <h1><span>Spot</span>IQ</h1>
+            <ul>
+                <a href="/" style="text-decoration: none; color: white;">
+                    <li>Home</li>
+                </a>
+                <a href="/" style="text-decoration: none; color: white;">
+                    <li>About</li>
+                </a>
+                <a href="/contact-main" style="text-decoration: none; color: white;">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="textBox">
+                <h1><span>Parking</span> System </h1>
+                <p>LogIn or SignUp for using parking syatem web application</p>
+                <a href="/admin"><button class="homeBtn" style="--i:#fff;">Admin</button></a>
+                <a href="/login"><button class="homeBtn" style="--i:#00bfff;">User</button></a>
+            </div>
+        </section>
+    </div>
+    <script>
+        const bgAnimation = document.getElementById('bgAnimation');
+        const numberOfColorBoxes = 400;
+        for (let i = 0; i < numberOfColorBoxes; i++) {
+            const colorBox = document.createElement('div');
+            colorBox.classList.add('colorBox');
+            bgAnimation.append(colorBox)
+        }
+    </script>
+</body>
+
+</html>

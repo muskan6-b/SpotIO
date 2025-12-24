@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+/* header styling */
+* {
+    margin: 0px;
+}
+
+@media screen and (min-width:800px) {
+
+
+
+    body {
+        /* color: aliceblue; */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background: radial-gradient(ellipse at bottom, #253242, #090a0f);
+    }
+
+    header {
+        padding-top: 1.5%;
+        padding-bottom: 1%;
+        height: 10%;
+    }
+
+    .logo {
+        margin-left: 2%;
+        display: flex;
+        position: absolute;
+    }
+
+    .logo_img {
+        width: 15%;
+    }
+
+    .list_item {
+        /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+        font-family: "Bellota", system-ui;
+
+        font-size: 1.4rem;
+        margin-right: 4%;
+        list-style-type: none;
+        display: inline;
+        position: relative;
+        margin-left: 10px;
+    }
+
+    .nav_a {
+        color: rgb(248, 245, 245);
+        text-decoration: none;
+    }
+
+    .nav_a:hover {
+        text-shadow: rgb(223, 211, 211) 1px 1px;
+        text-decoration-line: overline;
+    }
+
+    #logout_btn {
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: transparent;
+        color: rgb(248, 246, 246);
+    }
+
+    #logout_btn:hover {
+        text-shadow: none;
+        text-decoration-line: none;
+        background-color: #f7f7f7;
+        color: rgb(8, 8, 8);
+    }
+
+    .nav_list {
+        text-align: right;
+        padding-right: 5%;
+    }
+
+
+    .linked_img {
+        width: 3.1%;
+        margin-bottom: .5%;
+    }
+
+    .insta_img {
+        width: 4.5%;
+        margin-bottom: .5%;
+    }
+
+    .github_img {
+        width: 3%;
+        margin-bottom: .8%;
+        margin-right: 2%;
+    }
+
+    .contact_img {
+        text-align: right;
+    }
+
+    .footer {
+        font-family: "Bellota", system-ui;
+        color: azure;
+        text-align: center;
+        height: 25%;
+        background: linear-gradient(180deg, #12051c 0%, #1b2d36 100%);
+        border-top-left-radius: 200%;
+        border-top-right-radius: 200%;
+        width: 100%;
+    }
+
+    .copyright {
+        font-size: large;
+        float: left;
+        text-align: center;
+        margin-left: 24%;
+    }
+
+    .email {
+        font-size: large;
+        float: left;
+    }
+
+    .topnav a.icon {
+        display: none;
+    }
+}
+
+
+
+
+.contact-form {
+
+    /* position:relative; */
+
+    margin: 26vh 10% 26vh 10%;
+    /* display: block */
+}
+
+.con-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.feedback-input {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #3586ff;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.submit-contact {
+    align-content: center;
+    width: 9rem;
+    background: #3586ff;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: rgb(2, 38, 67);
+    font-family: fantasy;
+    font-size: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.1s;
+    margin-top: 4px;
+    font-weight: lighter;
+}
+
+[type="submit"]:hover {
+    background-color: rgb(2, 38, 67);
+    color: #3586ff;
+}
+
+
+
+
+@media screen and (max-width:800px) {
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background: radial-gradient(ellipse at bottom, #253242, #090a0f);
+    }
+
+    .logo {
+        margin-left: 4%;
+        display: flex;
+    }
+
+    .logo_img {
+        width: 18%;
+    }
+
+
+    .topnav {
+        box-shadow: 3px 3px 5px lightblue;
+        overflow: hidde;
+        background-color: transparent;
+    }
+
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+
+    /* Style navigation menu links */
+    .topnav li {
+        margin-right: 8%;
+        text-align: center;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    .topnav a {
+
+        color: white;
+        background: transparent;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background: transparent;
+        display: block;
+        position: absolute;
+        float: right;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav li.icon {
+        background: transparent;
+        color: white;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .topnav li:hover {
+        background-color: gray;
+        color: black;
+    }
+
+    .topnav a:hover {
+        background-color: transparent;
+        color: rgb(240, 234, 234);
+    }
+
+
+
+
+
+
+
+
+    .linked_img {
+        width: 3.1%;
+        margin-bottom: .5%;
+    }
+
+    .insta_img {
+        width: 4.5%;
+        margin-bottom: .5%;
+    }
+
+    .github_img {
+        width: 3%;
+        margin-bottom: .8%;
+        margin-right: 2%;
+    }
+
+    .contact_img {
+        margin-top: 2%;
+        /* text-align: right; */
+    }
+
+    .footer {
+        font-family: "Bellota", system-ui;
+        color: azure;
+        text-align: center;
+        height: 120px;
+        background: linear-gradient(180deg, #12051c 0%, #1b2d36 100%);
+        border-top-left-radius: 200%;
+        border-top-right-radius: 200%;
+        width: 100%;
+    }
+
+    .copyright {
+        font-size: large;
+        float: left;
+        text-align: center;
+        margin-left: 24%;
+    }
+
+    .get_txt {
+        font-size: 100%;
+    }
+
+    .email {
+        font-size: 70%;
+        /* float: left; */
+    }
+
+}
